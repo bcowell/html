@@ -1,0 +1,103 @@
+* {
+	padding: 0px;
+	margin: 0px auto;
+}
+#menu {
+	margin-top: -80px;
+	background-color: white;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+}
+#menu #logo {
+	text-align: center;
+	padding: 5px;
+	vertical-align: middle;
+}
+#menu #logo a {
+	text-decoration: none;
+	color: black;
+}
+#menu #logo a:hover {
+	color: #666666;
+}
+#menu nav{
+	text-align: center;
+	padding: 10px;
+	vertical-align: middle;
+}
+#menu #logo{
+	float: left;
+	margin-left: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
+#menu nav{
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+	width: 70%;
+}
+#menu nav a{
+	text-decoration: none;
+	padding: 30px;
+	font-size: 18px;
+	color: #999;
+}
+#menu nav a:hover{
+	color: #666666;
+}
+#menu #social-media{
+	float: right;
+	height: 45px;
+	padding-top: 5px;
+}
+#menu #social-media #icons a{
+	margin: 0 auto;
+	padding-right: 30px;
+	text-decoration: none;
+}
+#menu #social-media #icons .fa-facebook-official {
+	color: #3B5998;
+}
+#menu #social-media #icons .fa-envelope {
+	color: #999999;
+}
+#menu #social-media  #icons .fa-facebook-official:hover, #menu #social-media  #icons .fa-envelope:hover{
+	color: #666666;
+}
+#space {
+	margin-top: 80px;
+}
+#map {
+	height: 100%;
+}
+#window {
+	margin: 20px;
+}
+footer {
+	height: 100%;
+	background-color: #EEE;
+	text-align: center;
+	padding: 10px;
+}
+footer #subscribe {
+	display: inline-block;
+	width: 200px;
+	background-color: red;
+}
+footer #con {
+	display: block;
+}
+footer #like {
+	display: inline-block;
+    margin:0 auto;
+	padding: 10px;
+}
+footer #like .btn-default {
+	color: #3B5998;
+}
+footer #right {
+	float:right;
+    width:100px;
+}
