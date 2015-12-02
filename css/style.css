@@ -71,6 +71,8 @@
 }
 #map {
 	height: 100%;
+	width: 100%;
+	background:red;
 }
 #window {
 	margin: 20px;
@@ -82,22 +84,18 @@ footer {
 	padding: 10px;
 }
 footer #subscribe {
-	display: inline-block;
-	width: 200px;
+	margin-top: 30px;
+	width: 500px;
 	background-color: red;
-}
-footer #con {
-	display: block;
+	display: inline;
 }
 footer #like {
-	display: inline-block;
-    margin:0 auto;
+    margin-top: 30px;
 	padding: 10px;
 }
 footer #like .btn-default {
 	color: #3B5998;
 }
-footer #right {
-	float:right;
-    width:100px;
+footer #subscribe .form-control {
+	width: 200px;
 }
