@@ -1,28 +1,57 @@
-/* All other Screen Sizes */
-@media (min-width: 801px) 
+/* Regular Screen Sizes */
+@media (min-width: 769px) 
 {
-#menu .navbar .container 
-{
-	width: 100%;
-}
-#menu .navbar .container  .navbar-right #social-media
-{
-	height: 45px;
-	margin: 10px;
-}
-#menu #navbar
-{
-	text-align: center;
+	/* Navbar */
+	#menu 
+	{
+		width: 100%;
+	}
+	#menu .navbar-brand
+	{
+		
+		font-weight: bold;
+	}
+	#menu .nav
+	{
+		font-weight: bold;
+		font-size: 18px;
+		padding-left: 50px;
+	}
+	#menu #social-media #icons
+	{
+		padding-top: 5px;
+		padding-right: 10px;
+	}
+	#menu #social-media #icons .fa-facebook-official
+	{
+		text-decoration: none;
+		color: #3B5998;
+	}
+	#menu #social-media  #icons .fa-facebook-official:hover
+	{
+		color: #666666;
+	}
+	
+	/* Main */
+	#about #map
+	{
+		background-color: #999999;
+		width: 600px;
+		height: 400px;
+		box-shadow: 0px 0px 15px 0px #999999;
+	}
+	body
+	{
+		padding-top: 70px;
+	}
+	
 }
 /* Screen Size independent */
 *
 {
 	padding: 0px;
 	margin: 0px auto;
-}
-body
-{
-	padding-top: 70px;
+	text-align: center;
 }
 #menu .navbar-brand
 {
@@ -36,20 +65,6 @@ body
 {
 	color: #666666;
 }
-#menu #social-media #icons .fa-facebook-official
-{
-	color: #3B5998;
-}
-#menu #social-media  #icons .fa-facebook-official:hover
-{
-	color: #666666;
-}
-#ma
-{
-	height: 100%;
-	width: 100%;
-	background:red;
-}
 #window
 {
 	margin: 80px;
@@ -57,13 +72,6 @@ body
 #about
 {
 	
-}
-#about #map
-{
-	background-color: #999999;
-	width: 600px;
-	height: 400px;
-	box-shadow: 0px 0px 15px 0px #999999;
 }
 #news
 {
@@ -82,7 +90,7 @@ body
 #contact
 {
 	width: 450px;
-	margin-left: 0px;
+	
 	display: block;
 }
 #shop
