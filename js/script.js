@@ -1,7 +1,23 @@
-function initMap() {
-	// Create a map object and specify the DOM element for display.
+function facebookFeed(d, s, id) 
+{
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs);
+};
+function initMap()
+{
+	var latLng = {lat: 44.5365, lng: -79.7309};
+	
 	var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 44.536479, lng: -79.7330677},
-    zoom: 8
+    center: latLng,
+    zoom: 10,
+	destination: {place_id: 'ChIJBfci1HukKogRB2KPTBKozio'}
+    });
+  
+	var marker = new google.maps.Marker({
+    position: latLng,
+    map: map
   });
 }
