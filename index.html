@@ -3,11 +3,15 @@
 <head>
 	<title>Whistle Stop Pet Shop</title>
 	
-	<meta name=viewport content="width=device-width, initial-scale=1">
-	
+	<meta name=viewport content=" user-scalable=no, width=device-width, initial-scale=1.0">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/mobile.css" rel="stylesheet" type="text/css">
-	<script src="js/script.js" type="text/javascript"></script>
+	
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	
+	<!-- Bootstrap 3 -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	
 </head>
 
@@ -16,27 +20,27 @@
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container-fluid" id="navfluid">
 				<div class="navbar-header ">
-				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				  </button>
-				  <a class="logo navbar-brand" href="#">WHISTLE STOP</a>
+				  <a class="logo navbar-brand" href="#">Whistle Stop</a>
 				</div>
 			
 				<div class="collapse navbar-collapse" id="navigationbar">
 				  <ul class="nav navbar-nav">
-					<li><a href="#about">About</a></li>
-					<li><a href="#news">News</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="#shop">Shop</a></li>
+					<li><a href="#about" data-toggle="collapse" data-target=".navbar-collapse">About</a></li>
+					<li><a href="#news" data-toggle="collapse" data-target=".navbar-collapse">News</a></li>
+					<li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse">Contact</a></li>
+					<li><a href="#shop" data-toggle="collapse" data-target=".navbar-collapse">Shop</a></li>
 				  </ul>
 				
 			  <ul class="nav navbar-nav navbar-right">
 				<div id="social-media">
 					<div id="icons">
-						<li><a href="#" class="fa fa-facebook-official fa-3x"></a></li>
+						<li><a href="https://www.facebook.com/The-Whistle-Stop-Pet-Shop-288681051199821/" class="fa fa-facebook-official fa-3x"></a></li>
 					</div>
 				</div>
 			  </ul>
@@ -47,9 +51,10 @@
 	
 	
 	<div id="window">
-		<div id="about">
-			<div id="map"></div>
+		<div id="fb-root"></div>
+		<div id="map"></div>
 		
+		<div id="about" class="anchor">
 			<h2>About</h2>
 			<p>
 				The Cowells love animals and always will, they have been living in the Craighurst area for over ten years now and love it. Pam started breeding birds as a hobby about five years ago.
@@ -71,7 +76,7 @@
 			</p>
 		</div>
 	<hr>
-		<div id="news">
+		<div id="news" class="anchor">
 			<h2>News</h2>
 			<div id="promo">
 			</div>
@@ -83,21 +88,23 @@
 			</div>
 		</div>
 	<hr>
-		<div id="contact">
+		<div id="contact" class="anchor">
 			<h2>Contact</h2>
-			<form id="contact" action="php/contact.php" method="post">
+			<form id="contact-form" action="php/contact.php" method="post">
 				Name<br>
 				<input class="form-control" type="text" name="cf_name" placeholder="John Smith"><br>
 				E-mail<br>
 				<input class="form-control" type="text" name="cf_email" placeholder="jsmith@gmail.com"><br>
 				Message<br>
 				<textarea class="form-control"name="cf_message"></textarea><br>
-				<input class="btn btn-primary" type="submit" value="Send">
-				<input class="btn btn-default" type="reset" value="Clear">
+				<div id="contact-buttons">
+					<input class="btn btn-primary" type="submit" value="Send">
+					<input class="btn btn-default" type="reset" value="Clear">
+				</div>
 			</form>
 		</div>
 	<hr>
-		<div id="shop">
+		<div id="shop" class="anchor">
 			<h2>Shop</h2>
 			<p>Coming soon..</p>
 		</div>
@@ -109,13 +116,13 @@
 	<div class="container">
 		<div class="row">
 			
-			<div class="col-xs-4">
+			<div class="col-md-4">
 				<div id="like">
-					<a class="btn btn-default" href="#"><i class="fa fa-thumbs-o-up fa-2x"></i> Like us on Facebook</a>
+					<div class="fb-like" data-href="https://www.facebook.com/The-Whistle-Stop-Pet-Shop-288681051199821/" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
 				</div>
 			</div>
 
-			<div class="col-xs-4">
+			<div class="col-md-4">
 				<div id="company">
 					<p>The Whistle Stop Pet Shop</p>
 					<p><a href="mailto:pam@whistlestoppetshop.com">pam@whistlestoppetshop.com</a></p>
@@ -124,7 +131,7 @@
 				</div>
 			</div>
 			
-			<div class="col-xs-4">
+			<div class="col-md-4">
 				<div id="subscribe">
 					<div id="mc_embed_signup">
 						<form role="form" a method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
@@ -152,21 +159,74 @@
 		<p>&copy;2010 The Whistle Stop Pet Shop</p>
 	</footer>
 	
-	<!-- jQuery -->
-	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	
 	<!-- Bootstrap 3 -->
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	
 	<!-- Font Awesome -->
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
-	<!-- Facebook Feed -->
-	<script>"facebookFeed(document, 'script', 'facebook-jssdk')"</script>
+	<script type="text/javascript">
+		/* Facebook Feed */
+		  window.fbAsyncInit = function()
+		  {
+			FB.init({
+			  appId      : '1496480917314489',
+			  xfbml      : true,
+			  version    : 'v2.5'
+			});
+		  };
+
+		  (function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		/* Google Map API */
+		function initMap()
+		{
+			var latLng = {lat: 44.5365, lng: -79.7309};
+			
+			var map = new google.maps.Map(document.getElementById('map'), {
+			center: latLng,
+			zoom: 10,
+			destination: {place_id: 'ChIJBfci1HukKogRB2KPTBKozio'}
+			});
+		  
+			var marker = new google.maps.Marker({
+			position: latLng,
+			map: map
+		  });
+		}
+		/* Close bootstrap mobile-navbar on link click */
+		$(".navbar-nav a").click(function(event) {
+			$(".navbar-collapse").collapse('hide');
+		});
+		/* Smooth Anchor srolling */
+		$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+			|| location.hostname == this.hostname) {
+
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			   if (target.length) {
+				 $('html,body').animate({
+					 scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+		}
+	});
+	</script>
 	
 	<!-- Google Maps API -->
-	<script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5W8Wm0GcI2LLzN2f7jX_vJPnpNUK8c8c&callback=initMap"></script>
+	<script>
+	if (screen && screen.width > 768)
+	{
+		document.write('<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5W8Wm0GcI2LLzN2f7jX_vJPnpNUK8c8c&callback=initMap" type="text/javascript"><\/script>');
+	}
+	</script>
 	
 </body>
 
