@@ -4,14 +4,35 @@
 	#menu .navbar-brand
 	{
 		font-size: 28px;
+		font-weight: bold;
 	}
-}
-	
+	#menu #navigationbar
+	{
+		font-size: 28px;
+		font-weight: bold;
+	}
+	#about
+	{
+		font-size: 16px;
+		padding: 30px;
+		margin-top: 10px;
+	}
+	#news #feed
+	{
+		background-color: #999999;
+	}
 	body
 	{
-		padding-top: 20px;
+		padding-top: 50px;
+		text-align: center;
 	}
-
-
-
+	section 
+	{
+		position: absolute; top:0; bottom:0; left:0; right:0;
+		overflow: hidden;
+	}
+	footer #subscribe
+	{
+		display: none;
+	}
 }

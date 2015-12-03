@@ -8,50 +8,94 @@
 	}
 	#menu .navbar-brand
 	{
-		
+		font-size: 28px;
 		font-weight: bold;
 	}
 	#menu .nav
 	{
 		font-weight: bold;
 		font-size: 18px;
-		padding-left: 50px;
+		text-align: center;
+	}
+	#menu .navbar-nav
+	{
+		display: inline-block;
+		float: none;
+	}
+	#menu .navbar-nav li
+	{
+		padding-right: 40px;
 	}
 	#menu #social-media #icons
 	{
-		padding-top: 5px;
-		padding-right: 10px;
+		padding-top: 3px;
+		padding-right: 5px;
+		
 	}
-	#menu #social-media #icons .fa-facebook-official
-	{
-		text-decoration: none;
-		color: #3B5998;
-	}
-	#menu #social-media  #icons .fa-facebook-official:hover
-	{
-		color: #666666;
-	}
-	
 	/* Main */
-	#about #map
+	#map
 	{
 		background-color: #999999;
 		width: 600px;
 		height: 400px;
 		box-shadow: 0px 0px 15px 0px #999999;
 	}
+	#news #feed
+	{
+		background-color: #999999;
+		width: 500px;
+		height: 400px;
+	}
+	#contact
+	{
+		width: 45%;
+		display: block;
+	}
 	body
 	{
-		padding-top: 70px;
+		text-align: center;
 	}
-	
+	#window
+	{
+		padding-top: 150px;
+		width: 100%
+	}
+	#about
+	{
+		padding: 40px;
+		margin-top: 30px;
+	}
 }
 /* Screen Size independent */
 *
 {
 	padding: 0px;
 	margin: 0px auto;
-	text-align: center;
+}
+::-webkit-input-placeholder
+{
+   color: #808080;
+   text-align: left;
+}
+:-moz-placeholder
+{
+   color: #808080;
+   text-align: left;
+}
+.anchor
+{
+	position: relative;
+	padding-top: 50px;
+	margin-top: -50px;
+}
+#menu #social-media #icons .fa-facebook-official
+{
+	text-decoration: none;
+	color: #3B5998;
+}
+#menu #social-media  #icons .fa-facebook-official:hover
+{
+	color: #666666;
 }
 #menu .navbar-brand
 {
@@ -65,33 +109,23 @@
 {
 	color: #666666;
 }
-#window
+#contact-form
 {
-	margin: 80px;
+	display: block;
+	width: 80%;
+	text-align: left;
 }
-#about
+#contact .btn 
 {
-	
+	text-align: center;
 }
 #news
 {
-
+	z-index: 0;
 }
 #news #promo 
 {
 	background-color: #999999;
-}
-#news #feed
-{
-	background-color: #999999;
-	width: 500px;
-	height: 400px;
-}
-#contact
-{
-	width: 450px;
-	
-	display: block;
 }
 #shop
 {
@@ -100,6 +134,7 @@
 footer 
 {
 	height: 100%;
+	width: 100%;
 	background-color: #EEE;
 	padding: 10px;
 	text-align: center;
@@ -117,12 +152,7 @@ footer #subscribe
 	width: 380px;
 	display: block;
 }
-footer #like
+footer #like .fb-like
 {
-    margin-top: 30px;
-	padding: 10px;
-}
-footer #like .btn-default
-{
-	color: #3B5998;
+	background-color: red;
 }
